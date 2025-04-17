@@ -1,0 +1,37 @@
+/*管理者＿スタッフ別勤怠一覧画面＿月ごとの勤怠情報を表示*/
+
+.month-selector {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.month-selector a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: blue;
+}
+
+.attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.attendance-table th,
+.attendance-table td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+.attendance-table th {
+    background-color: #f0f0f0;
+}
+
+button[type="submit"] {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+}

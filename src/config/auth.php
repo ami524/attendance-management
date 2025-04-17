@@ -59,6 +59,11 @@ return [
     |
     */
 
+    'admin' => [
+        'driver' => 'session',
+        'provider' => 'admins', // 管理者用のプロバイダー
+    ],
+
     'providers' => [
         'users' => [
             'driver' => 'eloquent',

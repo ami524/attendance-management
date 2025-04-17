@@ -1,0 +1,36 @@
+/*管理者＿勤怠一覧画面＿日ごとの勤怠情報を表示*/
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.date-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+a {
+    color: #007BFF;
+    text-decoration: none;
+}
