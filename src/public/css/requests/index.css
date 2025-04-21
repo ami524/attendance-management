@@ -1,1 +1,7 @@
 /*一般＿申請一覧画面*/
+
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 4px;
+}

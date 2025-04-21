@@ -16,9 +16,11 @@ class AuthController extends Controller
     //会員登録時の処理
         public function store(RegisterRequest $request)
     {
-        $contact = $request->only(['name', 'email', 'password']);
+        // バリデーション済みデータを取得
+        $userData = $request->only(['name', 'email', 'password']);
         // パスワードをハッシュ化
         $userData['password'] = bcrypt($userData['password']);
+        // ユーザー登録
         User::create($userData);
 
         // ログイン画面にリダイレクト

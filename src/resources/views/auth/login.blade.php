@@ -25,7 +25,7 @@
 
         <div class="form-group">
             <label for="email">メールアドレス</label>
-            <input type="email" id="email" name="email" required autofocus>
+            <input type="email" id="email" name="email" autofocus>
         </div>
 
         @error('password')
@@ -38,7 +38,7 @@
 
         <div class="form-group">
             <label for="password">パスワード</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password">
         </div>
 
         <div>
