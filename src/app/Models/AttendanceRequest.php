@@ -21,6 +21,13 @@ class AttendanceRequest extends Model
         'reviewed_at',
     ];
 
+    protected $casts = [
+        'before_time' => 'datetime',
+        'after_time' => 'datetime',
+        'reviewed_at' => 'datetime',
+    ];
+
+
     /**
      * ユーザー（申請者）とのリレーション
      */

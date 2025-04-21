@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Notifications\Notifiable;
 
 class Admin extends Authenticatable
@@ -14,9 +15,6 @@ class Admin extends Authenticatable
     ];
 
     protected $hidden = [
-        'password',
+        'password', 'remember_token',
     ];
-
-    protected $table = 'admins'; // 明示的にテーブル名を指定
-
 }

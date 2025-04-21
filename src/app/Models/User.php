@@ -9,10 +9,10 @@ use Illuminate\Notifications\Notifiable;
 
 class User extends Authenticatable
 {
-    use Notifiable;
+    use Notifiable, Notifiable;
 
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'role_id',
     ];
 
     protected $hidden = [
@@ -24,8 +24,31 @@ class User extends Authenticatable
     ];
 
 
+    // リレーション
+    public function role()
+    {
+        return $this->belongsTo(Role::class);
+    }
+
+    public function attendances()
+    {
+        return $this->hasMany(Attendance::class);
+    }
+
+    public function attendanceRequests()
+    {
+        return $this->hasMany(AttendanceRequest::class);
+    }
+
+    public function monthlyAttendances()
+    {
+        return $this->hasMany(MonthlyAttendance::class);
+    }
+
     public function scopeGeneral($query)
     {
-        return $query->where('role', 'user');
+        return $query->whereHas('role', function ($q) {
+            $q->where('role_name', 'user');
+        });
     }
 }

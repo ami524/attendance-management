@@ -10,12 +10,23 @@ class Attendance extends Model
     use HasFactory;
 
     protected $fillable = [
-        'user_id', 'status', 'clock_in', 'clock_out', 'break_start', 'break_end'
+        'user_id', 'work_date', 'status', 'clock_in', 'clock_out', 'break_start', 'break_end'
     ];
 
     protected $dates = [
-        'clock_in', 'clock_out', 'break_start', 'break_end'
+        'clock_in' => 'datetime',
+        'break_start' => 'datetime',
+        'break_end' => 'datetime',
+        'clock_out' => 'datetime',
+        'work_date' => 'date',
     ];
+
+
+
+    public function requests()
+    {
+        return $this->hasMany(AttendanceRequest::class);
+    }
 
     /**
      * 勤務時間（休憩時間を除いた合計時間）を計算
