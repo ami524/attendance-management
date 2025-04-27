@@ -69,7 +69,7 @@ class AdminController extends Controller
                 Carbon::parse($attendance->work_day)->format('m/d(D)'),
                 optional($attendance->clock_in)->format('H:i') ?? '-',
                 optional($attendance->clock_out)->format('H:i') ?? '-',
-                $attendance->break_duration ?? '-',
+                $attendance->Interval_duration ?? '-',
                 $attendance->work_duration ?? '-',
             ];
         }

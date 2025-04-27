@@ -82,9 +82,9 @@ class Attendance extends Model
     }
 
 
-    public function breaks()
+    public function intervals()
     {
-        return $this->hasMany(Break::class);
+        return $this->hasMany(Interval::class);
     }
 
 }

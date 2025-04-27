@@ -2,7 +2,7 @@
 
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\AttendanceController;
-use App\Http\Controllers\BreakController;
+use App\Http\Controllers\IntervalController;
 use App\Http\Controllers\RequestController;
 use App\Http\Controllers\AdminController;
 
@@ -54,9 +54,9 @@ Route::middleware(['auth'])->group(function () {
     //退勤
     Route::post('/attendance/checkout', [AttendanceController::class, 'checkout'])->name('attendance.checkout');
     //休憩開始
-    Route::post('/attendance/break', [AttendanceController::class, 'break'])->name('attendance.break');
+    Route::post('/attendance/interval', [AttendanceController::class, 'interval'])->name('attendance.interval');
     //休憩終了
-    Route::post('/attendance/break-return', [AttendanceController::class, 'breakReturn'])->name('attendance.breakReturn');
+    Route::post('/attendance/interval-return', [AttendanceController::class, 'intervalReturn'])->name('attendance.intervalReturn');
 });
 
 

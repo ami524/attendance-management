@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class BreakController extends Controller
+class IntervalController extends Controller
 {
     public function start(Request $request) {
         // 休憩開始処理
